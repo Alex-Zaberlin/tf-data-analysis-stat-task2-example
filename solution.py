@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-from math import log
 
 from scipy.stats import norm
 
