@@ -6,6 +6,7 @@ from scipy.stats import norm
 chat_id = 282219367 # Ваш chat ID, не меняйте название переменной
 
 def solution(p: float, x: np.array) -> tuple:
-    alpha = p
-    time = 35
-    return (2 * np.mean(x) / time ** 2 -  norm.ppf(1 - alpha / 2, scale=2) / time ** 2, 2 * np.mean(x) / time ** 2 - norm.ppf(alpha / 2, scale=2) / time ** 2)
+    a = ((x+0.5)*2)/35**2
+    alpha = 1 - p
+    return a.mean() - np.sqrt(np.var(a)) * norm.ppf(1 - alpha / 2) / np.sqrt(len(a)), \
+           a.mean() - np.sqrt(np.var(a)) * norm.ppf(alpha / 2) / np.sqrt(len(a))
