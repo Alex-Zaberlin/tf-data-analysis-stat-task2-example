@@ -3,8 +3,6 @@ import numpy as np
 from math import log
 
 from scipy.stats import norm
-from scipy.stats import expon
-
 
 chat_id = 282219367 # Ваш chat ID, не меняйте название переменной
 
